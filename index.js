@@ -18,7 +18,7 @@ Elixir.extend('riot', function (src, output, options) {
         return (
             gulp
             .src(paths.src.path)
-            .pipe(riot()
+            .pipe(riot(options)
                 .on('error', function(e) {
                     new Elixir.Notification('Riot Compilation Failed!');
 
